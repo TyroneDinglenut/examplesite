@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yoshi Sushi Albany</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Yoshi Sushi Albany</h1>
+    <p>The best Sushi in Albany</p>
+    <p>Crafted by Chef Yoshi with 50+ years of experience</p>
+ <a href="menu.html" class="cta-button">View Menu</a>
+  </div>
+</section>
+
+    <section class="legacy-banner">
+  <p>For 28 years, Yoshi Sushi has served the freshest sushi in the Capital District. Chef Yoshi brings 50 years of culinary mastery to every dish.</p>
+</section>
+
+<section class="appreciation">
+  <p>Our returning customers have made Loudonville a great place to have a restaurant. Thank you for your continued support!</p>
+</section>
+
+
+    <div id="image-rotator">
+    <img id="rotating-image" src="images/image1.jpg" alt="Sushi Shot">
+  </div>
+
+  
+  </section>
+
+  <footer>
+    <p>© 2025 Yoshi Sushi Albany</p>
+  </footer>
+
+  <script>
+  const images = [
+    "images/image1.jpg",
+    "images/image2.jpg",
+    "images/image3.jpg",
+    "images/image4.jpg"
+  ];
+
+  let currentIndex = 0;
+  const imgElement = document.getElementById("rotating-image");
+
+  setInterval(() => {
+    imgElement.style.opacity = 0;
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      imgElement.src = images[currentIndex];
+      imgElement.style.opacity = 1;
+    }, 500);
+  }, 3000);
+</script>
+</body>
+</html>
